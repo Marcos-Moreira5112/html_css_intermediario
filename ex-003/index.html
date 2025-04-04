@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container div {
+            background: peachpuff;
+            border: 4px solid brown;
+            height: 100px;
+            width: 500px;
+            flex: 1 1 auto;
+        }
+
+        .flex-container .two {
+            flex-shrink: 0;
+        }
+    </style>
+    <title>Exercício</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+</body>
+</html>
