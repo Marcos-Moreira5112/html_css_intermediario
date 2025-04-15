@@ -4,22 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style type="text/css" media="all">
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+    }
+
     input {
-      display: block;
+      margin: 5px 0px 20px;
+      height: 50;
+    }
+
+    iframe {
+      border: 1px solid rgb(105, 105, 105);
+      border-radius: 10px;
+      height: 130px;
     }
   </style>
   
   <title></title>
 </head>
   
-<body
+<body>
   
   <label for="slider">Ajustar largura</label>
-  <input type="range" id="slider" min="100" max="200" value="150"/>
+  <input type="range" id="slider" min="210" max="500" value="500"/>
   
-  <iframe class="Iconteudo_flex" src="conteudo_flex.html" frameborder="0" width="150"></iframe>
-  
+  <iframe id="Iconteudo_flex" src="conteudo_flex.html" frameborder="0" width="500"></iframe>
+
+<!--------------------------------------------------------------->
+
+  <script>
+    const slider = document.getElementById("slider")
+    const iframe = document.getElementById("Iconteudo_flex")
+
+    slider.addEventListener("input", () => {
+      iframe.style.width = slider.value + "px";
+    });
+  </script>
+
+<!--------------------------------------------------------------->
+
 </body>
 
 </html>
